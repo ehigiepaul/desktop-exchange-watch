@@ -1,0 +1,4 @@
+position the wiget from setting
+
+create settings window
+

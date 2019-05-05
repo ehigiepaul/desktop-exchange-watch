@@ -1,0 +1,297 @@
+:root {
+    --green: #53c615;
+    --grey: #b7b7be;
+    --red: #931d1f;
+    --white: #ffff;
+    --plate1: #1c1e26;
+    --plate2: #313340;
+    --plate3: #f41b49;
+    --fSmall: 20px;
+    --fbig: 40px;
+    --anime: 300ms;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: B;
+    src: url("../font/Dosis-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: L;
+    src: url("../font/Dosis-ExtraLight.ttf");
+}
+
+* {
+    font-family: L;
+    color: white;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    -webkit-user-select: none;
+    background: rgba(0,0,0,0);
+}
+
+.widget {
+    flex-direction: row;
+    display: flex;
+    align-items: flex-start;
+    flex-basis: 90px;
+    background: rgba(0,0,0,0);
+}
+
+.app {
+    display: flex;
+
+    /* background: var(--plate1) */
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
+.widget .menuBar {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+    background-color: var(--plate2);
+    justify-content: center;
+    align-items: center;
+    -webkit-app-region: drag;
+    align-content: stretch;
+    transition: all 300ms ease-in-out;
+    z-index: 109;
+    width: 40px;
+}
+
+.widget .addSym {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: var(--plate2);
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
+
+.cardView .card {
+    display: flex;
+    flex-direction: column;
+
+    /* background: var(--plate2) */
+    padding: 10px;
+    margin-right: 10px;
+    justify-content: space-around;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+.widget .cardView {
+    display: flex;
+    align-self: stretch;
+    flex-grow: 1;
+    overflow: scroll;
+    transition: all 300ms ease-in-out;
+    width: 100%;
+    background: var(--plate1);
+}
+
+.card .ticker {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+}
+
+.ticker .currency {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-basis: 50px;
+    text-transform: uppercase;
+}
+
+.ticker .changes {
+}
+
+.card > p {
+    margin: 0px;
+    padding-top: 0px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.currency p {
+    font-family: B;
+}
+
+.card .value {
+    flex-direction: row;
+    display: flex;
+}
+
+.value .price {
+}
+
+.value .symbol {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+}
+
+.card .value p {
+    font-size: 27px;
+    text-transform: uppercase;
+}
+
+.card .volume {
+    display: flex;
+    flex-direction: row;
+}
+
+.volume .totalVol {
+    margin-left: 10px;
+    display: flex;
+}
+
+.volume .totalVol p {
+    text-transform: uppercase;
+}
+
+.card .holds {
+    display: flex;
+    flex-direction: row;
+}
+
+.card .holds .myHold {
+    display: flex;
+    flex-grow: 1;
+}
+
+.holds .myValue {
+    display: flex;
+    flex-grow: 1;
+}
+
+.menuBar .option {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: var(--plate2);
+    transition: all 300ms ease-in-out;
+    z-index: -15;
+    overflow: hidden;
+    width: 0px;
+    left: 26px;
+}
+
+.option button {
+    background: transparent;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    width: 60px;
+}
+
+.widget .option {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: center;
+    overflow: hidden;
+    align-content: stretch;
+    width: 0px;
+    transition: all 300ms ease-in-out;
+    align-items: center;
+    background: var(--plate2);
+}
+
+.widget .menuBar:hover + .option {
+    width: 80px;
+    transition: all 300ms ease-in-out;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.widget .option:hover {
+    width: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.widget .hide {
+    flex-grow: 0;
+    width: 0px;
+    transition: all 300ms ease-in-out;
+}
+
+.app .setting {
+    width: 400px;
+    padding: 10px;
+    flex-direction: column;
+    background: var(--plate1);
+}
+
+.row {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.volume p {
+    font-size: 16px;
+}
+
+.setting ul li {
+    list-style-type: none;
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.setting ul {
+    display: inline;
+    padding-left: 10px;
+    flex-grow: 1;
+}
+
+.setting p {
+    font-size: 19px;
+    display: inline;
+}
+
+.setting input {
+    height: 25px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.setting button {
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline;
+    background: transparent;
+}

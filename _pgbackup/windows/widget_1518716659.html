@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<script src="../js/vue.js"></script>
+	<link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="app" id='app'>
+		<div class="widget">
+			<div class="menuBar" data-pg-collapsed>
+				<i class="fa fa-align-justify fa-lg"></i>
+			</div>
+			<div class="option" data-pg-collapsed>
+				<button id="widgetSetting" @click='setting'>Setting</button>
+				<button id="widgetDisplay" @click='hide'>hide</button>
+				<button id="widgetQuit" @click='quit'>quit</button>
+			</div>
+			<div data-pg-collapsed class="cardView">
+
+				<!-- <ticker-view></ticker-view> -->
+
+
+				<div class="card" v-for='i in ticker' data-pg-collapsed>
+					<div class="ticker">
+						<div class="currency">
+							<p>{{i.symbol}}</p>
+						</div>
+						<div class="changes">
+							<p> +12%</p>
+						</div>
+					</div>
+					<div class="value">
+						<div class="price">
+							<p>{{i.last}}</p>
+						</div>
+						<div class="symbol">
+							<p>USD</p>
+						</div>
+					</div>
+					<div class="volume" data-pg-collapsed>
+						<p>VOL</p>
+						<div class="totalVol" data-pg-collapsed>
+							<p>{{i.volume }}</p>
+							<p> &nbsp; btc</p>
+						</div>
+						<div class="ticker"> </div>
+					</div>
+					<div class="holds">
+						<div class="myHold">
+							<p>5&nbsp;</p>
+							<p>BTC</p>
+						</div>
+						<div class="myValue">
+							<p>3467&nbsp;</p>
+							<p>USD</p>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="addSym" data-pg-collapsed>
+				<i class="fa fa-lg fa-plus"></i>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./widget.js"></script>
+
+</html>

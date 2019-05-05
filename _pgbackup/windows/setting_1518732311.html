@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head data-pg-collapsed>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<script src="../js/vue.js"></script>
+	<link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="app" id='app'>
+		<div class="setting">
+			<div class="row">
+				<p>Widget Position</p>
+				<div data-pg-collapsed>
+					<input type="radio" name="position" checked="checked" value="top" />
+					<p>top</p>
+					<input type="radio" name="position" checked="checked" value="bottom" />
+					<p>bottom</p>
+				</div>
+			</div>
+			<div class="row">
+				<p>HITBTC api key</p>
+				<input type="text" />
+			</div>
+			<div class="row">
+				<p>Favorite list</p>
+				<button>ADD</button>
+			</div>
+			<div class="row">
+				<button @click='quit'>CLOSE</button>
+				<button>SAVE</button>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./setting.js"></script>
+
+</html>

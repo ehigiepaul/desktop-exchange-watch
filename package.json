@@ -1,0 +1,22 @@
+{
+  "version": "0.0.1",
+  "name": "desk-watch",
+  "main": "main.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/nw.gui": "0.0.20",
+    "electron": "^1.8.2"
+  },
+  "window": {
+    "icon": "./img/logos.appiconset/logos_32.png"
+  },
+  "js-flags": "--enable_liveedit",
+  "dependencies": {
+    "@types/pouchdb": "^6.3.2",
+    "@types/ws": "^4.0.1",
+    "pouchdb": "^6.4.3",
+    "ws": "^4.0.0"
+  }
+}
